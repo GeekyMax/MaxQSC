@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<litepal>
+    <dbname value="Deadline" ></dbname>
+
+    <version value="8" ></version>
+
+    <list>
+        <mapping class="com.geekymax.maxschedule.database.Deadline"></mapping>
+        <mapping class="com.geekymax.maxschedule.database.TimePlace"></mapping>
+        <mapping class="com.geekymax.maxschedule.database.Course"></mapping>
+        <mapping class="com.geekymax.maxschedule.database.UserSession"></mapping>
+        <mapping class="com.geekymax.maxschedule.database.Grade"></mapping>
+        <mapping class="com.geekymax.maxschedule.database.TotalGrade"></mapping>
+    </list>
+</litepal>

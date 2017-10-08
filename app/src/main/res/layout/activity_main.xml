@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    android:id="@+id/outer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:fancy="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/drawer_layout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fitsSystemWindows="true"
+        tools:openDrawer="start"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent">
+
+        <android.support.design.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.design.widget.AppBarLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/AppTheme.AppBarOverlay">
+
+                <android.support.v7.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:background="?attr/colorPrimary"
+                    app:layout_scrollFlags="scroll|enterAlways"
+                    app:popupTheme="@style/AppTheme.PopupOverlay" />
+                <android.support.design.widget.TabLayout
+                    android:id="@+id/tab_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_scrollFlags="scroll|enterAlways"
+                    app:tabIndicatorColor="@color/white">
+
+
+                </android.support.design.widget.TabLayout>
+            </android.support.design.widget.AppBarLayout>
+
+            <FrameLayout
+                fancy:layout_behavior="@string/appbar_scrolling_view_behavior"
+                android:id="@+id/main_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+            <com.github.clans.fab.FloatingActionMenu
+                android:id="@+id/fam"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|end"
+                android:layout_margin="@dimen/btn_margin"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+
+                app:layout_constraintTop_toTopOf="parent"
+                app:menu_animationDelayPerItem="50"
+                app:menu_buttonSpacing="6dp"
+                app:menu_colorNormal="@color/accent"
+                app:menu_fab_size="normal">
+
+
+                <com.github.clans.fab.FloatingActionButton
+                    android:id="@+id/homework_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/ic_assignment_grey600_24dp"
+                    android:tint="@color/white"
+                    app:fab_colorNormal="@color/primary"
+                    app:fab_colorPressed="@color/primary" />
+                <com.github.clans.fab.FloatingActionButton
+                    android:id="@+id/ddl_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/ddl_white_24dp"
+                    android:tint="@color/white"
+                    app:fab_colorNormal="@color/primary_orange"
+                    app:fab_colorPressed="@color/primary_orange" />
+            </com.github.clans.fab.FloatingActionMenu>
+
+        </android.support.design.widget.CoordinatorLayout>
+
+
+
+
+        <android.support.design.widget.NavigationView
+            android:id="@+id/nav_view"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:fitsSystemWindows="true"
+            app:menu="@menu/activity_main_drawer" />
+
+    </android.support.v4.widget.DrawerLayout>
+
+
+
+</android.support.constraint.ConstraintLayout>
+
